@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "ms-azuretools.vscode-azurefunctions",
+    "ms-python.python",
+    "ms-azuretools.vscode-azurestaticwebapps",
+    "azurite.azurite"
+  ]
+}

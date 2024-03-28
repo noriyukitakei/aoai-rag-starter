@@ -1,0 +1,5 @@
+{
+  "platform": {
+    "apiRuntime": "python:3.10"
+  }
+}

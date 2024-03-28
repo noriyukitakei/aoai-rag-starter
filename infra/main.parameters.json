@@ -1,0 +1,75 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "environmentName": {
+      "value": "${AZURE_ENV_NAME}"
+    },
+    "location": {
+      "value": "${AZURE_LOCATION}"
+    },
+    "principalId": {
+      "value": "${AZURE_PRINCIPAL_ID}"
+    },
+    "resourceGroupName": {
+      "value": "${AZURE_RESOURCE_GROUP}"
+    },
+    "webServiceName": {
+      "value": "${AZURE_WEB_SERVICE_NAME}"
+    },
+    "webServiceLocation": {
+      "value": "eastus2"
+    },
+    "apiServiceName": {
+      "value": "${AZURE_API_SERVICE_NAME}"
+    },
+    "apiServiceLocation": {
+      "value": "${AZURE_API_LOCATION}"
+    },
+    "storageServiceSkuName": {
+      "value": "${AZURE_STORAGE_SERVICE_SKU}"
+    },
+    "storageServiceLocation": {
+      "value": "${AZURE_STORAGE_SERVICE_LOCATION}"
+    },
+    "searchServiceName": {
+      "value": "${AZURE_SEARCH_SERVICE_NAME}"
+    },
+    "searchServiceSkuName": {
+      "value": "${AZURE_SEARCH_SERVICE_SKU}"
+    },
+    "searchServiceLocation": {
+      "value": "${AZURE_SEARCH_SERVICE_LOCATION}"
+    },
+    "formRecognizerServiceName": {
+      "value": "${AZURE_FORM_RECOGNIZER_SERVICE_NAME}"
+    },
+    "formRecognizerSkuName": {
+      "value": "${AZURE_FORM_RECOGNIZER_SERVICE_SKU}"
+    },
+    "formRecognizerServiceLocation": {
+      "value": "${AZURE_FORM_RECOGNIZER_SERVICE_LOCATION}"
+    },
+    "openAiServiceName": {
+      "value": "${AZURE_OPENAI_SERVICE_NAME}"
+    },
+    "openAiModelName": {
+      "value": "${AZURE_OPENAI_MODEL_NAME}"
+    },
+    "openAiSkuName": {
+      "value": "${AZURE_OPENAI_SERVICE_SKU}"
+    },
+    "openAiServiceLocation": {
+      "value": "${AZURE_OPENAI_SERVICE_LOCATION}"
+    },
+    "cognitiveServicesName": {
+      "value": "${AZURE_COGNITIVE_SERVICES_NAME}"
+    },
+    "applicationInsightsServiceLocation": {
+      "value": "${AZURE_APPLICATION_INSIGHTS_SERVICE_LOCATION}"
+    },
+    "cosmosDbLocation": {
+      "value": "${AZURE_COSMOS_DB_LOCATION}"
+    }
+  }
+}

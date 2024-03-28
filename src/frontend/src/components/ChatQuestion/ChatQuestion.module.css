@@ -1,0 +1,15 @@
+.chatMessage {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 20px;
+  max-width: 66%;
+  display: flex;
+  align-items: center;
+  word-break: break-word;
+}
+
+.myMessage {
+  background: #007bff;
+  color: white;
+  align-self: flex-end;
+}

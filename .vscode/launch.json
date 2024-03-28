@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "[Web]SWA: Run rag-sample",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:4280",
+            "preLaunchTask": "swa: start rag-sample",
+            "webRoot": "${workspaceFolder}/src/frontend/src",
+            "timeout": 30000
+        },
+        {
+            "name": "[API]Attach to Python Functions",
+            "type": "python",
+            "request": "attach",
+            "port": 9091,
+            "preLaunchTask": "func: host start"
+        },
+        {
+            "name": "[Indexer]Python: indexer",
+            "type": "python",
+            "program": "${workspaceFolder}/scripts/indexer.py",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "python": "${workspaceFolder}/scripts/.venv/bin/python",
+            "envFile": "${workspaceFolder}/scripts/.env",
+            "args": [
+                "--docs",
+                "./data/*",
+//                "--remove"
+            ]
+        }
+    ]
+}

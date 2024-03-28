@@ -1,0 +1,59 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "func",
+			"label": "func: host start",
+			"command": "host start",
+			"problemMatcher": "$func-python-watch",
+			"isBackground": true,
+			"dependsOn": "pip install (functions)",
+			"options": {
+				"cwd": "${workspaceFolder}/src/backend"
+			}
+		},
+		{
+			"label": "pip install (functions)",
+			"type": "shell",
+			"osx": {
+				"command": "${config:azureFunctions.pythonVenv}/bin/python -m pip install -r requirements.txt"
+			},
+			"windows": {
+				"command": "${config:azureFunctions.pythonVenv}\\Scripts\\python -m pip install -r requirements.txt"
+			},
+			"linux": {
+				"command": "${config:azureFunctions.pythonVenv}/bin/python -m pip install -r requirements.txt"
+			},
+			"problemMatcher": [],
+			"options": {
+				"cwd": "${workspaceFolder}/src/backend"
+			}
+		},
+		{
+			"type": "shell",
+			"label": "swa start",
+			"command": "swa start http://localhost:5173/ --api-devserver-url http://localhost:7071 --run \"npm run dev\"",
+			"isBackground": true,
+			"problemMatcher": [
+				{
+					"pattern": [
+						{
+							"regexp": ".",
+							"file": 1,
+							"location": 2,
+							"message": 3
+						}
+					],
+					"background": {
+						"activeOnStart": true,
+						"beginsPattern": ".",
+						"endsPattern": "Waiting for .+7071 to be ready",
+					}
+				}
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/src/frontend"
+			},
+		},
+	]
+}
